@@ -1,0 +1,24 @@
+{
+  "name": "hardware",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev --port 4321",
+    "build": "vitepress build",
+    "lint": "biome check --write .",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    ".vitepress/**/*.{js,css}": "biome check --write .",
+    "scripts/*.mjs": "biome check --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "vitepress": "next"
+  },
+  "dependencies": {
+    "@giscus/vue": "^3.1.1"
+  }
+}
